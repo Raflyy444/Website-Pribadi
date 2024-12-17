@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitur Coba Sekarang</title>
+    <style>
+        /* Style umum untuk body */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Style container utama */
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+
+        /* Style heading */
+        h1 {
+            color: #333333;
+        }
+
+        /* Style paragraf */
+        p {
+            color: #666666;
+        }
+
+        /* Style tombol "Coba Sekarang" */
+        .btn-try-now {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #ffffff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Hover effect untuk tombol */
+        .btn-try-now:hover {
+            background-color: #218838;
+        }
+
+        /* Style modal overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style modal */
+        .modal {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Style tombol tutup */
+        .close-btn {
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #dc3545;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+    
+    <!-- Container utama -->
+    <div class="container">
+        <h1>Selamat Datang di Fitur Coba Sekarang!</h1>
+        <p>Temukan pengalaman baru dengan mencoba layanan kami. Klik tombol di bawah untuk mencoba sekarang!</p>
+        <!-- Tombol Coba Sekarang -->
+        <button class="btn-try-now" onclick="showModal()">Coba Sekarang</button>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h2>Selamat Mencoba!</h2>
+            <p>Anda sekarang siap untuk mencoba fitur yang kami tawarkan. Semoga Anda mendapatkan pengalaman terbaik!</p>
+            <!-- Tombol Tutup Modal -->
+            <button class="close-btn" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan modal
+        function showModal() {
+            document.getElementById("modalOverlay").style.display = "flex";
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal() {
+            document.getElementById("modalOverlay").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
