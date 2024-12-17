@@ -1,0 +1,110 @@
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 20%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.sidebar footer {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    position: relative;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://source.unsplash.com/1600x900/?nature,waterfall'); /* Ganti URL jika ingin */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Overlay gelap */
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.content h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
